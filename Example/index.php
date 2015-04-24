@@ -10,8 +10,7 @@
 <body>
 <?php
 
-//$client = new SwApiClient('[copy application ID here]', '[copy application secret here]');
-$client = new SwApiClient('e9046a49-aa58-42eb-82ec-a2cb0160c9ad', 'M4ufAu9qyOHqRlfkgocer4CJPMZAOACwWmtLlY2BssUAuMfUtLMxa4IJZB0kpzAU', 'http://10.10.20.158/kswapi');
+$client = new SwApiClient('[copy application ID here]', '[copy application secret here]');
 
 // search for diabetes articles:
 
