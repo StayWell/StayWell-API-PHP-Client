@@ -35,6 +35,19 @@ class SwApiClient {
 
         return $this->_serviceChannel->get('Buckets', $filters);
     }
+
+    public function getCollection($collectionIdOrSlug, $options) {
+        $url = 'Collections/' . $collectionIdOrSlug;
+        return $this->_serviceChannel->get($url, $options);
+    }
+
+    public function searchCollections($offset, $count, $filters = array()) {
+
+        $filters['$skip'] = $offset;
+        $filters['$top'] = $count;
+
+        return $this->_serviceChannel->get('Collections', $filters);
+    }
 }
 
 ?>
