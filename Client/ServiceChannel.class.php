@@ -77,7 +77,7 @@ class ServiceChannel
         $response = $this->send('POST', 'OAuth/TokenEndpoint', $headers, $body);
 
         if ($response->code != 200) {
-            throw new Exception($response->error_description);
+            throw new Exception($response->body->error_description);
         }
 
         $value = $response->body->access_token;
